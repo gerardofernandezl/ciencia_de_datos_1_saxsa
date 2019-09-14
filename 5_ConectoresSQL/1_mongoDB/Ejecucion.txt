@@ -1,0 +1,61 @@
+=== Revisar servicios de mongodb ===
+
+systemctl status mongod
+
+=== Ejecutar mongodb ===
+
+mongo
+
+=== Mostrar bases en mongodb ===
+
+show dbs
+
+=== Usar la base de datos llamada bimbodb ===
+
+use bimbodb
+
+=== Mostrar colecciones de la base de datos ===
+
+show collections
+
+=== Mostrar el contenido de las colecciones ===
+
+db.cliente.find()
+db.producto.find()
+db.town_state.find().pretty()
+db.train.find().pretty()
+
+=== Salir de mongodb ===
+
+exit
+
+=== Levantar servicios de spark, hdfs, livy ===
+
+** NOTA: checar que servicios se tienen levantados antes de ejecutar los siguientes comandos con el comando jps
+
+start-dfs.sh
+start-spark.sh
+livy-server start
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Una vez iniciados los servicios se tienen los siguientes procesos java ejecutandose
+
+jps
+
+
+11776 Jps
+11363 SecondaryNameNode
+11539 Master
+11044 NameNode
+11612 Worker
+11725 LivyServer
+11167 DataNode
+
+
+=== Ejecutar jupyter ===
+
+jupyter notebook
+
+
+

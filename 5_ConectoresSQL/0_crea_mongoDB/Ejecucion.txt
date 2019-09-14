@@ -1,0 +1,27 @@
+### Ejecutar libreoffice
+
+libreoffice --calc recursos-federales-transferidos.xls &
+
+### Cambiar a formato csv
+
+Archivo -> Guardar como...
+clic en todos los formatos
+seleccionar "Texto CSV(.csv)"
+Guardar
+
+seleccionar delimitador de campo tabulador
+
+### Importar a mongo el csv
+
+mongoimport --db ExcelDB --collection recursos_federales --type tsv --headerline --file recursos-federales-transferidos.csv
+
+### Verificar en mongo
+
+mongo
+show dbs
+use ExcelDB
+show collections
+db.recursos_federales.findOne()
+db.recursos_federales.count()
+
+

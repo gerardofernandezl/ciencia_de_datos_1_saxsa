@@ -1,0 +1,43 @@
+=== Revisar servicios de mysql ===
+
+systemctl status mysqld
+
+=== Ejecutar mysql ===
+
+mysql -u saxsauser -p
+ggsaXsa
+
+=== Mostrar bases en mysql ===
+
+SHOW databases;
+
+=== Usar la base de datos llamada bimbodb ===
+
+USE bimbodb;
+
+=== Mostrar tablas de la base de datos ===
+
+SHOW tables;
+
+=== Mostrar el contenido de las tablas ===
+
+SELECT * FROM sample_submission LIMIT 20;
+SELECT * FROM test LIMIT 20;
+
+=== Salir de mongodb ===
+
+exit;
+
+=== Levantar servicios de spark, hdfs, livy ===
+
+** NOTA: checar que servicios se tienen levantados antes de ejecutar los siguientes comandos con el comando jps
+
+start-dfs.sh
+start-spark.sh
+livy-server start
+
+=== Ejecutar jupyter ===
+
+jupyter notebook
+
+
