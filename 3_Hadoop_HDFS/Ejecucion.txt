@@ -1,0 +1,23 @@
+Ejercicio: Hadoop
+powered by saXsa
+info@saxsa.com.mx
+www.saxsa.com.mx
+
+####################  Levantar servicios de HDFS  ####################
+start-dfs.sh
+
+####################  Ver HDFS en el navegador  ####################
+localhost:50070
+
+####################  Crear directorio en HDFS  ####################
+hdfs dfs -mkdir /FuentesCurso
+
+####################  Subir fuente de información al HDFS en cierto directorio  ####################
+hdfs dfs -put /home/saXsa/Escritorio/Curso_Pyspark/1-Hadoop_HDFS/2018-01.csv /FuentesCurso
+
+####################  Copiar un archivo de HDFS a Unix File System  ####################
+hdfs dfs -get /FuentesCurso/2018-01.csv /home/saXsa/Escritorio/Descargado
+
+####################  Borrar un archivo del HDFS  ####################
+hdfs dfs -rm /FuentesCurso/2018-01.csv
+
